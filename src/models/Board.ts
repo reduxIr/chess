@@ -4,7 +4,7 @@ import { Colors } from "./Colors.ts";
 
 
 export class Board {
-    cells: Cell[][]
+    cells: Cell[][] = [];
 
     // create chessboard 
     public initCells() {
