@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Board } from '../models/Board.ts';
 import CellComponent from './CellComponent.tsx';
+import { Cell } from '../models/Cell.ts';
 
 interface BoardProps {
     board: Board;
@@ -8,14 +9,46 @@ interface BoardProps {
 }
 
 const BoardComponent: React.FC<BoardProps> = ({board, setBoard}) => {
+    const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
+
+    useEffect(() => {
+        highlightCells();
+    }, [selectedCell])
+
+    function click(cell: Cell) {
+        if (selectedCell && selectedCell !== cell && selectedCell.figure?.canMove(cell)) {
+            selectedCell.moveFigure(cell);
+            setSelectedCell(null); 
+        } else {
+            setSelectedCell(cell);
+        }
+    }
+    
+    function highlightCells() {
+        board.highlightCells(selectedCell);
+        updateBoard();
+    }
+
+    function updateBoard() {
+        const newBoard = board.getCopyBoard();
+        setBoard(newBoard);
+    }
+
     return (
         <div className='board'>
             {board.cells.map((row, index) => {
-                <div key={index}>
-                    {row.map(cell => {
-                        <CellComponent/>
-                    })}
-                </div>
+                return (
+                    <div key={index}>
+                        {row.map(cell => 
+                            <CellComponent 
+                                click = {click}
+                                cell={cell} 
+                                key={cell.id}
+                                selected = {cell.x === selectedCell?.x && cell.y === selectedCell?.y}
+                            />
+                        )}
+                    </div>
+                )  
             })}
         </div>
     )
@@ -23,4 +56,4 @@ const BoardComponent: React.FC<BoardProps> = ({board, setBoard}) => {
 
 export default BoardComponent
 
-// ошибка в том, что boardComponent не видит cells из класса Board 
+ 
