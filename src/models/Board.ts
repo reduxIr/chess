@@ -10,7 +10,6 @@ import { Rook } from "./figures/Rook.ts";
 // координаты с левого верхнего угла, вниз - y, вправо - x  
 export class Board {
     cells: Cell[][] = [];
-    // была фигня с координатами, поменял в row.push i и j местами
     public initCells() {
         for (let i = 0; i < 8; i++) {
             let row: Cell[] = [];
@@ -24,6 +23,7 @@ export class Board {
             this.cells.push(row);
         }
     }
+
 
     public getCopyBoard(): Board {
         const newBoard = new Board();
@@ -92,3 +92,4 @@ export class Board {
         this.addRooks();
     }   
 }
+
