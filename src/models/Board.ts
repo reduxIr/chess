@@ -6,10 +6,14 @@ import { King } from "./figures/King.ts";
 import { Bishop } from "./figures/Bishop.ts";
 import { Knight } from "./figures/Knight.ts";
 import { Rook } from "./figures/Rook.ts";
+import { Figure } from "./figures/Figure.ts";
 
 // координаты с левого верхнего угла, вниз - y, вправо - x  
 export class Board {
     cells: Cell[][] = [];
+    lostBlackFigures: Figure[] = [];
+    lostWhiteFigures: Figure[] = [];
+
     public initCells() {
         for (let i = 0; i < 8; i++) {
             let row: Cell[] = [];
@@ -28,6 +32,8 @@ export class Board {
     public getCopyBoard(): Board {
         const newBoard = new Board();
         newBoard.cells = this.cells;
+        newBoard.lostBlackFigures = this.lostBlackFigures;
+        newBoard.lostWhiteFigures = this.lostWhiteFigures;
         return newBoard;
     }
 

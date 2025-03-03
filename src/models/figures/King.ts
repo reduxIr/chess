@@ -21,7 +21,6 @@ export class King extends Figure {
         || (Math.abs(this.cell.x - target.x) === 1) && Math.abs(this.cell.y - target.y) === 1) {
             return true
         }
-        console.log(this.cell) 
         return false;
     }
 }

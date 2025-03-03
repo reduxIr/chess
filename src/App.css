@@ -51,3 +51,22 @@
   background-color: #22c022;
 }
 
+.lost {
+  height: calc(50vh - 60px);
+  padding: 30px;
+  margin-left: 50px;
+  background-color: lightgray;
+}
+
+.sequence {
+  width: 50px;
+  padding: 30px;
+  margin: 50px;
+  background-color: lightgray;
+}
+
+.lost img {
+  width: 20px;
+  height: 20px;
+}
+
