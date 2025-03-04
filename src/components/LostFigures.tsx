@@ -21,5 +21,5 @@ const LostFigures: React.FC<LostFigureProps> = ({title, figures}) => {
         </div>
     )
 } 
-
+//dfdf
 export default LostFigures;
