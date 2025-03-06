@@ -1,19 +1,20 @@
 import React from 'react';
 import { Figure } from '../models/figures/Figure';
-
+import {Board}  from "../models/Board";
 interface LostFigureProps {
-    title:  string
-    figures: Figure[]
+    color: string;
+    title:  string;
+    figures: Figure[];
 }
 
-const LostFigures: React.FC<LostFigureProps> = ({title, figures}) => {
+const LostFigures: React.FC<LostFigureProps> = ({color ,title, figures}) => {
     return (
-        <div className="lost">
-            <h3>{title}</h3>
+        <div className='lost'>
+            <h3 className='lostString'>{title}</h3>
             {figures.map(figure => {
                 return (
                     <div key={figure.id}>
-                        {figure.name} {figure.logo && <img src={figure.logo}/>}
+                         {figure.logo && <img src={figure.logo}/>}
                     </div>
                 )
                 
@@ -21,5 +22,5 @@ const LostFigures: React.FC<LostFigureProps> = ({title, figures}) => {
         </div>
     )
 } 
-//dfdf
+
 export default LostFigures;

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import BoardComponent from './components/BoardComponent.tsx';
-import { Board } from './models/Board.ts';
-import { Player } from './models/Player.ts';
-import { Colors } from './models/Colors.ts';
-import LostFigures from './components/LostFigures.tsx';
-import Timer from './components/Timer.tsx';
+import BoardComponent from './components/BoardComponent';
+import { Board } from './models/Board';
+import { Player } from './models/Player';
+import { Colors } from './models/Colors';
+import LostFigures from './components/LostFigures';
+import Timer from './components/Timer';
 
 function App() {
   const [board, setBoard] = useState(new Board())
@@ -39,8 +39,8 @@ function App() {
         swapPlayer = {swapPlayer}
       />
       <div>
-        <LostFigures title="Черные фигуры" figures={board.lostBlackFigures}/>
-        <LostFigures title="Белые фигуры" figures={board.lostWhiteFigures}/>
+        <LostFigures color='black' title="Черные фигуры" figures={board.lostBlackFigures}/>
+        <LostFigures color='white' title="Белые фигуры" figures={board.lostWhiteFigures}/>
       </div>
     </div>
   );

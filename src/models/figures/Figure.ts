@@ -1,6 +1,6 @@
 import { Colors } from "../Colors";
 import logo from '../../assets/black=king.png'
-import { Cell } from "../Cell.ts";
+import { Cell } from "../Cell";
 
 export enum FigureNames {
     FIGURE = 'Фигура',

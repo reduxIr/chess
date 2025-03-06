@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
-import { Player } from './../models/Player.ts';
-import { Colors } from '../models/Colors.ts';
+import { Player } from '../models/Player';
+import { Colors } from '../models/Colors';
 
 interface TimerProps {
     currentPlayer: Player | null;
@@ -40,9 +40,9 @@ const Timer: React.FC<TimerProps> = ({currentPlayer, restart}) => {
     return (
         <div>
             <div>
-                <button onClick={handleRestart}>Restart game</button>
+                <button id="reset" onClick={handleRestart}>Restart game</button>
             </div>
-            <div>
+            <div className='timer'>
                 <h2>Время черных: {blackTime}</h2>
                 <h2>Время белых: {whiteTime}</h2>
             </div>

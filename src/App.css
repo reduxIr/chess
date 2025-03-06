@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(202, 181, 162, 0.4);
 }
 
 .board {
@@ -52,21 +53,81 @@
 }
 
 .lost {
-  height: calc(50vh - 60px);
-  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #cca080;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
   margin-left: 50px;
-  background-color: lightgray;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: black;
 }
 
-.sequence {
-  width: 50px;
-  padding: 30px;
-  margin: 50px;
-  background-color: lightgray;
+.lostString {
+  flex-basis: 100%;
+  margin-bottom: 0.5rem;
 }
-
 .lost img {
   width: 20px;
   height: 20px;
 }
 
+.sequence {
+  background-color: #cca080;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 4rem;
+  height: 3rem;
+  margin: 3rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: black;
+}
+
+.timer {
+  background-color: #cca080;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem 3rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: black;
+}
+
+#reset {
+  position: relative;
+  width: 5rem;
+  height: 3rem;
+  background-color: #cca080;
+  border: none;
+  margin: 1rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: black;
+  border-radius: 9%;
+  cursor: pointer;
+  top: 1rem;
+  left: 7rem;
+}
+button:hover {
+  background-color: #be9680;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  animation: pulse 0.5s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.01); }
+  100% { transform: scale(1); }
+
+}

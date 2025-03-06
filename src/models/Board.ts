@@ -1,14 +1,14 @@
-import { Cell } from "./Cell.ts";
-import { Colors } from "./Colors.ts";
-import { Queen } from "./figures/Queen.ts";
-import { Pawn } from "./figures/Pawn.ts";
-import { King } from "./figures/King.ts";
-import { Bishop } from "./figures/Bishop.ts";
-import { Knight } from "./figures/Knight.ts";
-import { Rook } from "./figures/Rook.ts";
-import { Figure } from "./figures/Figure.ts";
+import { Cell } from "./Cell";
+import { Colors } from "./Colors";
+import { Queen } from "./figures/Queen";
+import { Pawn } from "./figures/Pawn";
+import { King } from "./figures/King";
+import { Bishop } from "./figures/Bishop";
+import { Knight } from "./figures/Knight";
+import { Rook } from "./figures/Rook";
+import { Figure } from "./figures/Figure";
 
-// координаты с левого верхнего угла, вниз - y, вправо - x  
+// координаты с левого верхнего угла, вниз - y, вправо - x
 export class Board {
     cells: Cell[][] = [];
     lostBlackFigures: Figure[] = [];

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Board } from '../models/Board.ts';
-import CellComponent from './CellComponent.tsx';
-import { Cell } from '../models/Cell.ts';
-import { Player } from '../models/Player.ts';
+import { Board } from '../models/Board';
+import CellComponent from './CellComponent';
+import { Cell } from '../models/Cell';
+import { Player } from '../models/Player';
 
 interface BoardProps {
     board: Board;

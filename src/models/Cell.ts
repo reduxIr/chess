@@ -1,6 +1,6 @@
-import { Colors } from "./Colors.ts";
-import { Figure } from "./figures/Figure.ts";
-import { Board } from "./Board.ts";
+import { Colors } from "./Colors";
+import { Figure } from "./figures/Figure";
+import { Board } from "./Board";
 
 export class Cell {
     readonly x: number;

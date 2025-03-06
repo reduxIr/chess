@@ -1,7 +1,7 @@
-import { Cell } from "../Cell.ts";
-import { Colors } from "../Colors.ts";
-import { Figure, FigureNames } from "./Figure.ts";
-import blackLogo from '../../assets/black-rook.png';
+import { Cell } from "../Cell";
+import { Colors } from "../Colors";
+import { Figure, FigureNames } from "./Figure";
+import blackLogo from "../../assets/black-rook.png";
 import whiteLogo from '../../assets/white-rook.png';
 
 
